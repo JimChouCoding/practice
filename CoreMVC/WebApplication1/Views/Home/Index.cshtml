@@ -1,9 +1,15 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+@section Styles{
+    <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true"/>
+}
 <div class="text-center">
     <h1 class="display-4">全端班 MVC 複習
     </h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@section Scripts{
+    <script src="~/js/site.min.js" asp-append-version="true"></script>
+}

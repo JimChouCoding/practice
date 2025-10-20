@@ -1,0 +1,350 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "webTravelContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "MinimumProductVersion": "2.6.1186",
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "CustomerWebsite",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[AspNetRoleClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserLogins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserTokens]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Coupon_CustomerLevels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CouponPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Coupons]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerBlacklist]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerCouponsRecords]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerLevels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerLoginHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerOrderFeedback]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerOrderMemberInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerOrders]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerProfile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Customers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerSupportFeedback]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerSupportMessages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerSupportTickets]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CustomerTripProjects]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DateDimension]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Districts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmployeeProfile]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmployeeRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Employees]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FAQCategorys]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FAQs]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GroupLocations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GroupMessages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GroupPhotos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HotelKeywords]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HotelPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hotels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Keywords]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LocationKeywords]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[LocationPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Locations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NewsPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NewsTable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderPaymentInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrderStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaymentStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProductAnalysis]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProductPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Products]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Products_Hotels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Products_Locations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Products_Promotions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Products_Restaurants]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Products_Transportations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Promotions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Regions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RestaurantKeywords]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RestaurantPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Restaurants]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Semi_Hotels]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Semi_Locations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Semi_Transportations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SemiSelfProducts]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SerialControl]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SupportAnalysis]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TicketPriority]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TicketStatus]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TicketTypes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TourGroupGuests]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TourGroupMembers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TourGroups]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Transportations]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TransportKeywords]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TransportPics]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TripProjectDetails]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[VendorLoginHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vendors]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false
+}
