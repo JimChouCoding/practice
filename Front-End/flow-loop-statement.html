@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 流程控制: 迴圈指令</title>
+</head>
+
+<body>
+    <script>
+        //break 指令
+        console.log('break 指令');
+        let n = 0;
+        while (n < 5) {
+            if (n == 3) {
+                break;
+            }
+            console.log(n);
+            n++;
+
+        }
+
+        //continue 指令
+        console.log('continue 指令');
+        for (let n = 0; n < 5; n++) {
+            if (n == 3) {
+                continue; //強迫回到迴圈上方，忽略下面的指令，進入下一個
+            }
+            console.log(n);
+        }
+
+        
+    </script>
+</body>
+
+</html>
