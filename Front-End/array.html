@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: 陣列物件</title>
+</head>
+
+<body>
+    <script>
+        //建立陣列物件
+        let grades = [];
+        console.log(grades);
+        grades.push(70);
+        grades.push(80);
+        grades.push(90);
+        console.log(grades);
+        console.log(grades[2]);
+        console.log(grades[3]);
+        grades.push(100);
+        console.log(grades.length);
+        let total = 0; //用來記錄累加的結果
+        //利用for迴圈，逐一取得陣列中的資料
+        for (let i = 0; i < grades.length; i++) {
+            console.log(grades[i]);
+            total += grades[i]; //累加到total變數中
+        }
+        console.log("總分:" + total);
+        let avg = total / grades.length;
+        console.log("平均:" + avg);
+    </script>
+</body>
+
+</html>
