@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 流程控制: 函式回傳值</title>
+</head>
+
+<body>
+    <script>
+        //return 用來結束函式
+        function test() {
+            console.log("hello");
+            // return;
+        }
+        let value = test();
+        console.log(value);
+
+        function divide(n1, n2) {
+            let result = n1 / n2;
+            // console.log(result);
+            return result;
+        }
+        let ans = divide(10, 2);
+        console.log(ans);
+    </script>
+</body>
+
+</html>

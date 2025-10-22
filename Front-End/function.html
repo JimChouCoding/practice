@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 流程控制: 函式基礎</title>
+</head>
+
+<body>
+    <script>
+        //建立函式
+        function test() {
+            console.log("hello");
+            console.log("world");
+        }
+        //呼叫函式
+        test();
+
+        //印出任意的資料
+        function show(message) {
+            console.log(message);
+        }
+
+        show();
+        show("Hello");
+        show(10);
+
+        //做除法
+        function divide(n1, n2) {
+            let result = n1 / n2;
+            console.log(result);
+        }
+        divide(10, 2);
+        divide(5, 3);
+        divide("Hello", "wolrd");
+
+        //做除法函式 用另一種寫法
+        let divede2 = function (n1, n2) {
+            let result = n1 / n2;
+            console.log(result);
+        };
+        divide(10, 2);
+        divide(5, 3);
+        divide("Hello", "wolrd");
+    </script>
+</body>
+
+</html>
