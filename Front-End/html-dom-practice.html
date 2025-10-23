@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript: HTML DOM 網頁畫面操作</title>
+    <!-- <style>
+        .text {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- <h3>HTML DOM 畫面操作</h3>
+    <div id="content">練習網頁畫面的操作</div>
+    <button onclick="change();">點我</button>
+    <script>
+        function change() {
+            // document.body.innerHTML = "按了按鈕";
+            //取得標籤物件
+            let element = document.querySelector('#content');
+            console.log(element);
+            //操作標籤物件
+            element.innerHTML = "對特定的標籤做操作";
+            element.className = 'text';
+            element.style.fontSize = '30px';
+            element.style.color = 'red';
+        }
+    </script> -->
+
+    <div>
+        <span onclick="changeToAbout();">關於我</span>
+        <span onclick="changeToExps();">學經歷</span>
+    </div>
+    <hr>
+    <div id="about">大家好，我是彭彭</div>
+    <div id="exps" style="display:none">我是心理系畢業，後來當軟體工程師</div>
+    <script>
+        function changeToAbout() {
+            let aboutElement = document.querySelector('#about');
+            aboutElement.style.display = 'block';
+            let expsElement = document.querySelector('#exps');
+            expsElement.style.display = 'none';
+        }
+        function changeToExps() {
+            let aboutElement = document.querySelector('#about');
+            aboutElement.style.display = 'none';
+            let expsElement = document.querySelector('#exps');
+            expsElement.style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript:HTML DOM 核心觀念</title>
+</head>
+
+<body>
+    <script>
+        console.log(window); // 印出 window 物件
+        console.log(window.innerWidth, window.innerHeight); // 印出視窗的寬度與高度
+        //透過screen 取得螢幕的寬度與高度
+        console.log(window.screen.width, window.screen.height); // 印出螢幕的寬
+
+        //網址列的內容
+        console.log(window.location.href); // 印出目前網頁的網址
+
+        //更改網址列的內容(跳轉網頁)
+        // window.location.href = "https://www.google.com.tw";
+
+        //認識document 物件
+        console.log(window.document); // 印出 document 物件
+        console.dir(document); // 印出 document 物件的內容
+        //取得網頁標題
+        console.log(document.title); // 印出網頁的標題
+        document.title = "新的網頁標題"; //更改網頁標題
+        //取得body 標籤
+        console.log(document.body); // 印出 body 標籤
+        //更改網頁主畫面的內容(Body 標籤的內文)
+        console.log(document.body.innerHTML); // 印出 body 標籤的內容
+        document.body.innerHTML = "hello HTML DOM";
+    </script>
+</body>
+
+</html>
