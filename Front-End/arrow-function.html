@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>箭頭函式 Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      //計算1+2+3+...10的結果
+      //   function calculate(max) {
+      //     let result = 0;
+      //     let n = 1;
+      //     while (n <= max) {
+      //       result += n;
+      //       n++;
+      //     }
+      //     // console.log(result);
+      //     return result;
+      //   }
+
+      //箭頭函式
+      let calculate = (max) => {
+        let result = 0;
+        let n = 1;
+        while (n <= max) {
+          result += n;
+          n++;
+        }
+        // console.log(result);
+        return result;
+      };
+
+      //呼叫函式
+      let ans1 = calculate(10); //1+2+..+10
+      let ans2 = calculate(20); //1+2+...+10
+      console.log(ans1);
+      console.log(ans2);
+
+      //乘法的函式
+
+      //   let multiply = (n1, n2) =>{
+      //     return n1 * n2;
+      //   }
+      let multiply = (n1, n2) => n1 * n2;
+
+      let ans = multiply(3, 4);
+      console.log(ans);
+    </script>
+  </body>
+</html>
