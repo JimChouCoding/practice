@@ -1,0 +1,95 @@
+﻿<h1>訂單</h1>
+
+<div id="app">
+
+    <div>Order筆數: {{Orders.length}}</div>
+    <div>editingId: {{ editingId }}</div>
+
+    <button class="btn btn-primary mb-2" @@click="">Create</button>
+
+    <table class="table table-hover table-bordered">
+        <thead class="table table-dark">
+            <tr>
+                @* <td>ShipAddress</td>
+                <td>ShipCity</td>
+                <td>ShipRegion</td>
+                <td>ShipPostalCode</td> *@
+                <th>OrderID</th>
+                <th>CustomerID</th>
+                <th>EmployeeID</th>
+                <th>OrderDate</th>
+                <th>RequiredDate</th>
+                <th>ShippedDate</th>
+                <th>ShipVia</th>
+                <th>Freight</th>
+                <th>ShipName</th>
+                <th>ShipCountry</th>
+                <th>Actions</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="o in Orders" :key="o.OrderId">
+                <td>{{ o.OrderId }}</td>
+                <td>{{ o.CustomerId }}</td>
+                <td>{{ o.EmployeeId }}</td>
+                <td>{{ o.OrderDate }}</td>
+                <td>{{ o.RequiredDate }}</td>
+                <td>{{ o.ShippedDate }}</td>
+                <td>{{ o.ShipVia }}</td>
+                <td>{{ o.Freight }}</td>
+               @*  <td>{{ o.ShipName }}</td> *@
+                <td>
+                    <span v-if="editingId !== o.OrderId">{{ o.ShipName }}</span>
+                    <input v-else class="form-control form-control-sm" v-model="o.ShipName" />
+                </td>
+
+                @*
+                <td>{{ o.ShipAddress }}</td>
+                <td>{{ o.ShipCity }}</td>
+                <td>{{ o.ShipRegion }}</td>
+                <td>{{ o.ShipPostalCode }}</td> *@
+                <td>{{ o.ShipCountry }}</td>
+                <td>
+                    <button class="btn btn-sm btn-success" @@click="EditOrders(o)">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+
+                </td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+
+@section Scripts{
+    <script src="/lib/vue/vue.global.js"></script>
+    <script>
+
+        console.log('JS 有執行');
+        const app = Vue.createApp({
+            setup() {
+                // const Title = ref('訂單資料表');
+                const editingId = Vue.ref(null);
+                const Orders = Vue.ref([]);
+
+                function EditOrders(o) {
+                    editingId.value = o.OrderId;
+                    console.log("Edit click: ", o.OrderId, o.ShipName);
+                }
+                
+                async function GetOrdersList() {
+                    const response = await fetch(`/OrdersData/List`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({})
+                    });
+                    if (response.ok) Orders.value = await response.json();
+                }
+                Vue.onMounted(() => { GetOrdersList(); });
+                return { Orders, GetOrdersList, EditOrders, editingId}
+            }
+        });
+        app.mount('#app');
+    </script>
+}

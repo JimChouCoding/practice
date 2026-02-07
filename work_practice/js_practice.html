@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let a = ["97", "", "0", 2, "3d", "f", "098", "s4", "234", 21, "0", "  "];
+  let result = a
+    .filter((item) => item != "" && !isNaN(Number(item)))
+    .map((item) => Number(item))
+    .filter((n) => n < 100)
+    .sort((a, b) => a - b);
+
+  console.log(result);
+
+  let b = [
+    { name: "Mary", age: 20 },
+    { name: "John", age: 32 },
+    { name: "Kevin", age: 50 },
+    { name: "Ron", age: 12 },
+    { name: "Judy", age: 68 },
+    { name: "Jim", age: 9 },
+    { name: "Ivy", age: 22 },
+  ];
+
+  let result2 = b
+    .filter((item) => item.name.startsWith("J") && item.age > 25)
+    .sort((a, b) => a.age - b.age);
+  console.log(result2);
+</script>
