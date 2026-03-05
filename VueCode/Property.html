@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--View-->
+      <h3>{{Firstname}}</h3>
+      <h3>{{Lastname}}</h3>
+      <h3>{{fullName()}}</h3>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.5.22/dist/vue.global.js"></script>
+    <script>
+      var vueApp = {
+        data() {
+          return {
+            //model
+            Firstname: "YI",
+            Lastname: "CHOU",
+            Age: 20,
+          };
+        },
+        props: {
+          pAge: { type: Number, default: 30 },
+        },
+        methods: {
+          //controller
+          fullName: function () {
+            return `${this.Firstname}, ${this.Lastname}`;
+          },
+        },
+        computed: {
+          cAge() {
+            return this.Age + this.pAge;
+          },
+        },
+      };
+      var app = Vue.createApp(vueApp).mount("#app");
+      console.log(app.Firstname);
+      console.log(`Age=${app.Age}`);
+      console.log(`pAge=${app.pAge}`);
+      console.log(`cAge=${app.cAge}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <div v-for="(email, i) in emails" :key="i">
+            <input v-model="email" :ref="`email${i}`" />
+        </div>
+        <button @click="add">add</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                emails: ['test@test.com']
+            },
+            methods: {
+                add: function (e) {
+                    let j = this.emails.push("")
+                    this.$nextTick(() => {
+                        this.$refs[`email${j - 1}`][0].focus()
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

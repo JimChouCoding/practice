@@ -1,0 +1,66 @@
+﻿@section  Styles {
+    <style></style>
+}
+
+<div id="app" style="width: 40%">
+    <!--View-->
+	<h3 class="mb-3 text-center">匯率計算</h3>
+    <div class="form-floating mb-3">
+        <input class="form-control" v-model="rate" placeholder=""/>
+        <label class="form-label">美金兌台幣匯率</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" v-model="twd" placeholder="" />
+        <label class="form-label">台幣</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input class="form-control" v-model="usd" placeholder="" />
+        <label class="form-label">美金</label>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://unpkg.com/vue@3.5.22/dist/vue.global.js"></script>
+   <script>
+       var vueApp={
+           data(){
+               return{
+                   //model
+                   rate: 30,
+                   twd: 1000,
+                   usd: 0
+				};
+           },
+           methods:{
+               
+           },
+           watch: {
+                twd(newVal, oriVal){
+                   this.usd=(newVal/this.rate).toFixed(2);
+                },
+                // usd(newVal, oriVal){
+                //      this.twd=newVal*this.rate.toFixeed(2);
+                // },
+                rate(newVal, oriVal){
+                     this.usd=(this.twd/this.rate).toFixed(2);
+                },
+           },
+           mounted: async function(){
+               var baseAddreess = "https://localhost:7043";
+               var response = await fetch(`${baseAddreess}/Home/GetExchangeRate`,{
+					 method: "GET",
+               });
+
+               console.log(response.ok);
+               if(response.ok){
+                   var data = await response.json();
+				   // alert(JSON.stringify(data));
+                   console.log(data);
+                   console.log(typeof(data))
+                   this.rate = data;
+               }
+                
+           }
+       };
+       var app = Vue.createApp(vueApp).mount("#app");
+   </script>
+}

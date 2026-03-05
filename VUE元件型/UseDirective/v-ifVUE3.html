@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <h3 v-if="rank=='A'">極品</h3>
+        <h3 v-else-if="rank=='B'">高級品</h3>
+        <h3 v-else-if="rank=='C'">良品</h3>
+        <h3 v-else>次級品</h3>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    rank: 'C'
+                };
+            },
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>

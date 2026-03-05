@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label>手機資費方案:</label>
+        <select v-model="selectedOption" v-on:change="changeOption">
+            <option v-for="option in options" v-bind:value="option.price">
+                {{ option.name }}
+            </option>
+        </select>
+    </div>    
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    selectedOption: 649,
+                    options: [
+                        {name:"499方案", price:499},
+                        {name:"699方案", price:649},
+                        {name:"999方案", price:899},
+                    ]
+                };
+            },
+            methods: {
+                changeOption:function(){
+                    alert(this.selectedOption);
+                }
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>

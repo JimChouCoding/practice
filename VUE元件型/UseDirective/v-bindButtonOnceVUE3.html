@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">        
+        <button v-bind:disabled="clicked" v-on:click="clickSubmit()">提交</button>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    clicked: false
+                }                
+            },
+            methods:{
+                clickSubmit:function(){
+                    this.clicked=true;
+                },
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>

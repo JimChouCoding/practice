@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app" v-on:click.self="clickOuterDiv" style="background-color:aqua">
+        <div v-on:click="clickInnerDiv" style="width:50%;height:50%;background-color:#ffd800;margin:auto;">Inner</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            methods: {
+                clickOuterDiv: function () {
+                    alert("click outer div!");
+                },
+                clickInnerDiv: function () {
+                    alert("click inner div!");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

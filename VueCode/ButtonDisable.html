@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--View-->
+      <button v-bind:disabled="clicked" v-on:click="buy">購買</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.5.22/dist/vue.global.js"></script>
+    <script>
+      var vueApp = {
+        data() {
+          return {
+            //model
+            clicked: false,
+          };
+        },
+        methods: {
+          //controller
+          buy: function () {
+            this.clicked = true;
+          },
+        },
+      };
+      var app = Vue.createApp(vueApp).mount("#app");
+    </script>
+  </body>
+</html>

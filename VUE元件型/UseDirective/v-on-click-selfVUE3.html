@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <div v-on:click.self="clickOuterDiv" style="background-color:aqua">
+            <div v-on:click="clickInnerDiv" style="width:50%;height:50%;background-color:#ffd800;margin:auto;">Inner</div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            methods: {
+                clickOuterDiv: function () {
+                    alert("click outer div!");
+                },
+                clickInnerDiv: function () {
+                    alert("click inner div!");
+                }
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>

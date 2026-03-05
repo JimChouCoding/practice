@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>v-model</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--View-->
+      <label>身分證字號</label>
+      <input v-model="id" />
+      <h3>{{id.toUpperCase()}}</h3>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.5.22/dist/vue.global.js"></script>
+    <script>
+      var vueApp = {
+        data() {
+          return {
+            //model
+            id: "",
+          };
+        },
+        methods: {
+          //controller
+        },
+      };
+      var app = Vue.createApp(vueApp).mount("#app");
+    </script>
+  </body>
+</html>

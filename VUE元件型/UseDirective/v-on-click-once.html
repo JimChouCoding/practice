@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <a href="#" v-on:click.once="clickHyperlink">Hyperlink</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            methods: {
+                clickHyperlink: function () {
+                    alert("click Hyperlink!");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

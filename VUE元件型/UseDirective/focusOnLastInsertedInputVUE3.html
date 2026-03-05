@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <div v-for="(email, i) in emails" :key="i">
+            <input v-model="emails[i]" :ref="`email${i}`" />
+        </div>
+        <button v-on:click="add">追加</button>
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    emails: ['test@test.com']
+                };                
+            },
+            methods: {
+                add: function (e) {
+                    let j = this.emails.push("");
+                    this.$nextTick(() => {
+                        this.$refs[`email${j - 1}`][0].focus();
+                    });
+                }
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>
