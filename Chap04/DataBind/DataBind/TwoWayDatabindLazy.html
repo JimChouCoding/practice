@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <p>LazyMessage:{{ LazyMessage }}</p>
+        <input v-model.lazy="LazyMessage" type="text" /><br />
+        <p>InstantMessage:{{ InstantMessage }}</p>
+        <input v-model="InstantMessage" type="text" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                LazyMessage: '',
+                InstantMessage: ''
+            }
+        })
+    </script>
+</body>
+</html>

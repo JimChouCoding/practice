@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label>Month:</label>
+        <select v-model="selectMonth" style="width:10%;">
+            <option v-for="mnnth in months">{{ mnnth }}</option>
+        </select>
+        <br/>
+        <label>Day:</label>
+        <select v-model="selectDay" style="width:10%;">
+            <option v-for="day in days">{{ day }}</option>
+        </select>
+    </div>    
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    selectDay: 1,
+                    selectMonth:1,
+                    days: Array.from({ length: 32 }, (v, i) => i).slice(1),      // [1, 2, 3, ..., 31]
+                    months: Array.from({ length: 13 }, (v, i) => i).slice(1)     // [1, 2, 3, ..., 12]
+                }
+            },
+            mounted () {
+                let selectedDay = new Date();
+                this.selectDay = selectedDay.getDate(); // Sets selectedDay to the today's day
+                this.selectMonth = selectedDay.getMonth()+1; // Sets selectedDay to the today's number of the month
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>

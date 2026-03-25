@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <p>Level: {{StarRank}}</p>
+        <input type="radio" value="OneStar" v-model="StarRank" />&#11088;<br/>
+        <input type="radio" value="TwoStar" v-model="StarRank" />&#11088;&#11088;<br />
+        <input type="radio" value="ThreeStar" v-model="StarRank" />&#11088;&#11088;&#11088;<br />
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    StarRank: 'TwoStar'
+                };
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>

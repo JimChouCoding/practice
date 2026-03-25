@@ -1,0 +1,18 @@
+﻿
+<div id="app">
+    <div>您選擇了 : {{ selected }}</div>
+    <label>國家:</label>
+    <select asp-items="@ViewBag.Country" v-model="selected">
+    </select>
+</div>
+<script src="https://unpkg.com/vue@latest"></script>
+<script>
+    var vueApp = {
+        data() {
+            return {
+                selected: '未選擇'
+            };
+        }
+    };
+    var app = Vue.createApp(vueApp).mount("#app");
+</script>

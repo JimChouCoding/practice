@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <div id="app">
+        <p>Languages: {{languages.join(', ')}}</p>
+        <input type="checkbox" value="英文" v-model="languages" />英文
+        <input type="checkbox" value="中文" v-model="languages" />中文<br />
+        <input type="checkbox" value="我同意" v-model="Agree" />我同意
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                languages: [],
+                Agree: false
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app">
+        <h3>{{ message }}</h3>
+        <input v-model="message" placeholder="請輸入文字" />
+    </div>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script>
+        var vueApp = {
+            data() {
+                return {
+                    message: 'Hello Vue!'
+                };
+            }
+        };
+        var app=Vue.createApp(vueApp).mount("#app");
+    </script>
+</body>
+</html>
